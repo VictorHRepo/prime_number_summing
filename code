@@ -1,0 +1,18 @@
+numbers = list(range(2,5001))
+non_prime = list()
+non_prime.append(1)
+sum = 0
+
+for number in numbers:
+  counter = 0
+  for x in range(2,5001):
+    if number%x==0:
+      counter += 1
+    elif number/x < 1:
+      break
+    else:
+      continue 
+  if counter == 1:
+    sum += number
+
+print(sum)
